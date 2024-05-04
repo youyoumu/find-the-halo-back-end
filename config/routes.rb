@@ -9,5 +9,4 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get 'scores' => 'scores#index'
-  get 'game' => 'game#create'
 end
