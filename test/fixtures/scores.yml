@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_name: MyString
+  how_long_to_beat: MyString
+
+two:
+  player_name: MyString
+  how_long_to_beat: MyString
