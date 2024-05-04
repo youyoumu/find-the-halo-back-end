@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_04_090855) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_04_145401) do
+  create_table "game_hit_boxes", force: :cascade do |t|
+    t.integer "game_id"
+    t.integer "hit_box_id"
+    t.boolean "cleared"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hit_boxes", force: :cascade do |t|
+    t.integer "image_id"
+    t.float "x_start"
+    t.float "x_end"
+    t.float "y_start"
+    t.float "y_end"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "scores", force: :cascade do |t|
     t.string "player_name"
     t.string "how_long_to_beat"

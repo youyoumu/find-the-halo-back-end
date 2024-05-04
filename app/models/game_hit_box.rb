@@ -1,0 +1,2 @@
+class GameHitBox < ApplicationRecord
+end
