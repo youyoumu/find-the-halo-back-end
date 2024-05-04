@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+hit_box = HitBox.new(x_start: 0, x_end: 5, y_start: 0, y_end: 5, image_id: 0)
+hit_box.save
+
+score = Score.new(player_name: 'player 1', how_long_to_beat: '00:60:00')
+score.save
