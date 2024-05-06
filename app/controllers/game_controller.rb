@@ -18,8 +18,12 @@ class GameController < ApplicationController
     @game = Game.find params[:game_id]
     @hit_box = @game.hit_boxes.where(image_id: params[:image_id], id: params[:hit_box_id]).first
     puts @hit_box.attributes
+    total_hit_boxes = @game.game_hit_boxes.count
+    total_cleared = @game.game_hit_boxes.where(cleared: true).count
     data = {
-      hit: false
+      hit: false,
+      total_hit_boxes: total_hit_boxes,
+      total_cleared: total_cleared
     }
     if params[:x] > @hit_box.x_start && params[:x] < @hit_box.x_end && params[:y] > @hit_box.y_start && params[:y] < @hit_box.y_end
       puts "hit"
