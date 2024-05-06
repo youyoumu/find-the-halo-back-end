@@ -3,6 +3,7 @@ class GameController < ApplicationController
     @game = Game.new
     @game.hit_boxes << HitBox.find(1)
     @game.hit_boxes << HitBox.find(2)
+    @game.hit_boxes << HitBox.find(3)
     @game.save
     data = {
       game_id: @game.id,
