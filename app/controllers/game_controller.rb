@@ -1,8 +1,8 @@
 class GameController < ApplicationController
   def new
     @game = Game.new
-    hit_box = HitBox.find 1
-    @game.hit_boxes << hit_box
+    @game.hit_boxes << HitBox.find(1)
+    @game.hit_boxes << HitBox.find(2)
     @game.save
     data = {
       game_id: @game.id,
@@ -15,7 +15,7 @@ class GameController < ApplicationController
   def create
     puts "params", params
     @game = Game.find params[:game_id]
-    @hit_box = @game.hit_boxes.where(image_id: params[:image_id]).first
+    @hit_box = @game.hit_boxes.where(image_id: params[:image_id], id: params[:hit_box_id]).first
     puts @hit_box.attributes
     data = {
       hit: false
