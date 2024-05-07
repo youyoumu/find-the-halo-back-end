@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   root "game#new"
 
   get "scores" => "scores#index"
+  post "scores" => "scores#create"
   post "game" => "game#create"
 end
