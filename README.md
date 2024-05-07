@@ -1,24 +1,9 @@
-# README
+# Find the Halo (Back End)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is part of The Odin Project course
 
-Things you may want to cover:
+Live: https://find-the-halo.pages.dev/
 
-* Ruby version
+Front End repo: https://github.com/youyoumu/find-the-halo
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Back End repo: https://github.com/youyoumu/find-the-halo-back-end
