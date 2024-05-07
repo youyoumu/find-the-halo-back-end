@@ -30,7 +30,10 @@ class GameController < ApplicationController
       data[:hit] = true
       data[:coordinates] = {x_start: @hit_box.x_start, x_end: @hit_box.x_end, y_start: @hit_box.y_start, y_end: @hit_box.y_end}
       data[:total_cleared] = @game.game_hit_boxes.where(cleared: true).count
-
+      if data[:total_cleared] == total_hit_boxes
+        @game.update(cleared_at: Time.now)
+        data[:how_long_to_beat] = @game.cleared_at - @game.created_at
+      end
     else
       puts "miss"
     end

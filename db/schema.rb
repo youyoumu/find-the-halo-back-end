@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_04_150038) do
   end
 
   create_table "games", force: :cascade do |t|
+    t.datetime "cleared_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
