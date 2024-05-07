@@ -37,7 +37,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_04_150038) do
 
   create_table "scores", force: :cascade do |t|
     t.string "player_name"
-    t.string "how_long_to_beat"
+    t.float "how_long_to_beat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

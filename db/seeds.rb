@@ -16,6 +16,3 @@ hit_box2.save
 
 hit_box3 = HitBox.new(x_start: 35.87406793703397, x_end: 39.6023198011599, y_start: 53.02402651201326, y_end: 56.55896161281414, image_id: 0)
 hit_box3.save
-
-score = Score.new(player_name: "player 1", how_long_to_beat: "00:60:00")
-score.save

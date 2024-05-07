@@ -1,6 +1,6 @@
 class ScoresController < ApplicationController
   def index
-    @scores = Score.all
+    @scores = Score.all.order(how_long_to_beat: :asc)
     render json: @scores
   end
 
