@@ -1,0 +1,15 @@
+services:
+  web:
+    container_name: find-the-halo-back-end
+    image: youyoumu2025/find-the-halo-back-end:latest
+    ports:
+      - "8809:3000"
+    restart: unless-stopped
+    environment:
+      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
+    volumes:
+      - ./storage:/rails/storage
+      - ./log:/rails/log
+      - ./tmp:/rails/tmp
+    depends_on:
+      - db
