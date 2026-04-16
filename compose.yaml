@@ -5,8 +5,8 @@ services:
     ports:
       - "8809:3000"
     restart: unless-stopped
-    environment:
-      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
+    env_file:
+      - .env
     volumes:
       - ./storage:/rails/storage
       - ./log:/rails/log
